@@ -1,14 +1,19 @@
 const assertArrayEqual = function(actual, expected) {
-  for (let i = 0; i < actual.length; i++) {
-    for (let j = 0; j <= i; j++){
-      if (actual[i] === expected[j]) {
-        console.log(`Assertation Passed: ${actual} === ${expected} 😀`)
-      } else {
-        console.log(`Assertation Failed: ${actual} !== ${expected} 🥴`)
-      }
-    }
+  if (actual.length !== expected.length) {
+    console.log(`Assertation Failed: ${actual} !== ${expected} 🥴`)
+    return false;
+  } 
+  for (let i = 0; i < actual.length; i++){
+    if (actual[i] !== expected[i]) {
+      console.log(`Assertation Failed: ${actual} !== ${expected} 🥴`)
+      return false;
+    } 
+    
   }
+  console.log(`Assertation Passed: ${actual} === ${expected} 😀`)
 };
+
+
 function tail(array){
   let tail_array = [];
   for (let i = 1; i < array.length; i++){
@@ -18,7 +23,7 @@ function tail(array){
 };
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 console.log(tail(words));
-console.log("--------")
+console.log("--------");
 assertArrayEqual(tail(words),['Lighthouse', 'Labs']);
-const test = [1,2,3,4,5];
+const test = [1,2,7,4,5];
 assertArrayEqual(tail(test),[2,3,4,5]);
