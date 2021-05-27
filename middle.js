@@ -17,20 +17,29 @@ const assertArraysEqual = function(actual, expected) {
 
 //Middle function definition
 const middle = function(array){
+  middle_array = [];
   let len = array.length;
   let str = len/2;
   end = str + 1;
   str_odd = Math.ceil(str);
-  //console.log(str_odd);
-  middle_array = [];
-
+  
   if (len === 2) {
-    return middle_array;
+
+    middle_array = [];
+  } else if (str === str_odd) {
+    middle_array.push(array[str-1],array[str]);
+  } else if (str !== str_odd){
+    middle_array.push(array[str_odd-1]);
   }
+  return console.log(middle_array);
 };
 /********************************************************************/
+middle([1,2]);
 middle([1,2,3,4,5,6]);
 middle([1,2,3,4,5,6,7]);
+middle([4,62,73,5,5,54,6,7]);
+middle([1,2,3,4,6,7,8]);
+middle([1,2,3,4,5,6,7,45,4,56,45,4,5]);
 
   /*
  1. check the length of the array
