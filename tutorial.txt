@@ -1,0 +1,12 @@
+ i - insert to edit mode
+a - inserting after current cursor position
+ESC - getting out
+y - copy (must be in  the ESC mode)
+p - paste
+u - undo
+dd - delete the whole line of text
+yy - copy a whole line of text
+Quit vim:
+ESC :wq --> save changes
+ESC :! --> ignore changes
+
