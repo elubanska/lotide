@@ -1,7 +1,6 @@
 function countLetters(str){
  let letters = {};
  for (let i = 0; i < str.length; i++){
-     for (let j =0; j <str.length; j++){
         let count = 0;
         for(let j = 0; j < str.length; j++){
             if(str[j] === str[i]){
@@ -9,7 +8,6 @@ function countLetters(str){
             }
         }
         letters[str[i]] = count;
-     }
   }
   return letters;
 }
