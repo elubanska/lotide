@@ -21,8 +21,7 @@ const assertArraysEqual = function(actual, expected) {
   
 const without = function(source, itemsToRemove) {
     let newArray = []; 
-    newArray = source;
-    //console.log(`Source: `,newArray, ` Source: `, source);
+    newArray = source.slice(0); //creating duplicate of the origin array
     for (let i = 0; i < newArray.length; i++){
         // console.log("i: ",i);
         for(let j = 0; j<itemsToRemove.length; j++){
@@ -42,6 +41,6 @@ const without = function(source, itemsToRemove) {
 
 without(words, ["lighthouse"]); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
-assertArraysEqual(words_2, ["hello", "world", "lighthouse"]);
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 without([1,2,3],[2]);
 without(["1","2","3"],["1",2,"3"]);
