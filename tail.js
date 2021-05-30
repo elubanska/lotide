@@ -1,4 +1,4 @@
-const assertArrayEqual = function(actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual.length !== expected.length) {
     console.log(`Assertation Failed: ${actual} !== ${expected} 🥴`)
     return false;
@@ -21,9 +21,11 @@ function tail(array){
   }
   return tail_array;
 };
+console.log("--------");
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 console.log(tail(words));
 console.log("--------");
-assertArrayEqual(tail(words),['Lighthouse', 'Labs']);
+assertEqual(tail(words),['Lighthouse', 'Labs']);
+console.log("--------");
 const test = [1,2,7,4,5];
-assertArrayEqual(tail(test),[2,3,4,5]);
+assertEqual(tail(test),[2,3,4,5]);
