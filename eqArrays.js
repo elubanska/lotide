@@ -12,4 +12,5 @@ const eqArrays = function(actual, expected) {
   console.log(`Assertation Passed: ${actual} === ${expected} 😀`)
   return true;
 };
-eqArrays(["1","2","3"], ["1","2","3"]);
+module.exports = eqArrays;
+//eqArrays(["1","2","3"], ["1","2","3"]);
