@@ -1,19 +1,4 @@
-//by ELO
-/********************************************************************/
-const assertArraysEqual = function(actual, expected) {
-    if (actual.length !== expected.length) {
-      console.log(`Assertation Failed: ${actual} !== ${expected} 🥴`)
-      return false;
-    } 
-    for (let i = 0; i < actual.length; i++){
-      if (actual[i] !== expected[i]) {
-        console.log(`Assertation Failed: ${actual} !== ${expected} 🥴`)
-        return false;
-      }   
-    }
-    console.log(`Assertation Passed: ${actual} === ${expected} 😀`)
-  };
-/********************************************************************/
+const assertArraysEqual = require('./assertArraysEqual');
 
 //Middle function definition
 const middle = function(array){
@@ -33,14 +18,8 @@ const middle = function(array){
   }
   return console.log(middle_array);
 };
-/********************************************************************/
-middle([1,2]);
-middle([1,2,3,4,5,6]);
-middle([1,2,3,4,5,6,7]);
-middle([4,62,73,5,5,54,6,7]);
-middle([1,2,3,4,6,7,8]);
-middle([1,2,3,4,5,6,7,45,4,56,45,4,5]);
 
+module.exports = middle;
   /*
  1. check the length of the array
  len = array.length
